@@ -14,7 +14,7 @@ const ManagementCard5 = () => {
                 <CardBody>
                     <p>Artur</p>
                     <p>Kocemba</p>
-                    <p>Skarbnik</p>
+                    <p>Sekretarz</p>
                     <p>kontakt:</p>
                 </CardBody>
             </Card>
