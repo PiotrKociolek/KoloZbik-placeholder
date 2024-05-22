@@ -5,6 +5,9 @@ import LoginPanel from "@/components/loginPanel"
 const Login = () => {
     return (
         <div>
+            <div>
+                <ZbikNavbar/>
+            </div>
         <LoginPanel/>
         </div>
     );

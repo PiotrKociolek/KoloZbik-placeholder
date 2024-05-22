@@ -18,12 +18,7 @@ const ManagementSection = () => {
             <ManagementCard3 />
             <ManagementCard4 />
             <ManagementCard5 />
-            <div className="opacity-0 ">
-                <h3 style={{ textAlign: 'center' }}>Komisja Rewizyjna</h3>
-                <ManagementCard />
-                <ManagementCard />
-                <ManagementCard />
-            </div>
+
 
         </div>
     );

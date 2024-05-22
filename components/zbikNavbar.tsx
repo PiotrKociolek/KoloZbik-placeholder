@@ -1,7 +1,5 @@
-'use client'
-
-import {useState} from "react";
-import {usePathname} from "next/navigation";
+import { useState } from "react";
+import { usePathname } from "next/navigation";
 import { useRouter } from 'next/navigation'
 
 import {
@@ -27,20 +25,20 @@ const ZbikNavbar = () => {
             return "focus"
         } else return "none";
     };
-    const dropdownNavigation =(route:string):any =>{
+    const dropdownNavigation = (route: string): any => {
         router.push(route)
     }
     const buttonColorIfIsActive = (route: string): string => {
-       const activePath = isRouteActive(route)
-        if (activePath===undefined){
-            return "text-red-300"
-        } else if (activePath=="focus"){
+        const activePath = isRouteActive(route)
+        if (activePath === undefined) {
+            return "text-black"; // Zmieniam kolor tekstu na czarny
+        } else if (activePath == "focus") {
             return "text-amber-300"
-        } else {return "text-gray-300"}
+        } else { return "text-gray-300" }
     }
 
-   return (
-        <Navbar isBordered isBlurred={false}>
+    return (
+        <Navbar isBordered isBlurred={false} >
             <NavbarBrand>
                 <p className="font-bold text-black">Koło Żbik w Nowym Sączu</p>
             </NavbarBrand>
@@ -51,22 +49,22 @@ const ZbikNavbar = () => {
                     </Link>
                 </NavbarItem>
                 <NavbarItem>
-                    <Link className={buttonColorIfIsActive("/gallery")}underline={isRouteActive("/gallery")} href="/gallery">
+                    <Link className={buttonColorIfIsActive("/gallery")} underline={isRouteActive("/gallery")} href="/gallery">
                         Galeria
                     </Link>
                 </NavbarItem>
                 <NavbarItem>
-                    <Link className={buttonColorIfIsActive("/history")}underline={isRouteActive("/history")} href="/history">
+                    <Link className={buttonColorIfIsActive("/history")} underline={isRouteActive("/history")} href="/history">
                         Historia
                     </Link>
                 </NavbarItem>
                 <NavbarItem>
-                    <Link className={buttonColorIfIsActive("/news")}underline={isRouteActive("/news")} href="/news">
+                    <Link className={buttonColorIfIsActive("/news")} underline={isRouteActive("/news")} href="/news">
                         Aktualności
                     </Link>
                 </NavbarItem>
                 <NavbarItem>
-                    <Link className={buttonColorIfIsActive("/contact")}underline={isRouteActive("/contact")} href="/contact">
+                    <Link className={buttonColorIfIsActive("/contact")} underline={isRouteActive("/contact")} href="/contact">
                         Kontakt
                     </Link>
                 </NavbarItem>
@@ -92,13 +90,25 @@ const ZbikNavbar = () => {
                     <DropdownItem
                         key="zarząd"
                         onPress={(e) => dropdownNavigation("/management")}
-                        >
-                        <Link className={buttonColorIfIsActive("/management")}underline={isRouteActive("/management")} href="/management">Zarząd</Link>
+                    >
+                        <Link className={buttonColorIfIsActive("/management")} underline={isRouteActive("/management")} href="/management">Zarząd</Link>
+                    </DropdownItem>
+                    <DropdownItem
+                        key="lista czlonkow"
+                        onPress={(e) => dropdownNavigation("/memberList")}
+                    >
+                        <Link className={buttonColorIfIsActive("/memberList")} underline={isRouteActive("/management")} href="/memberList">Lista członków</Link>
+                    </DropdownItem>
+                    <DropdownItem
+                        key="NiechImKniejaWiecznieSzumi"
+                        onPress={(e) => dropdownNavigation("/NiechImKniejaWiecznieSzumi")}
+                    >
+                        <Link className={buttonColorIfIsActive("/NiechImKniejaWiecznieSzumi")} underline={isRouteActive("/NiechImKniejaWiecznieSzumi")} href="/NiechImKniejaWiecznieSzumi">Niech im knieja wiecznie szumi</Link>
                     </DropdownItem>
                     <DropdownItem
                         key="Mapy-Obwodów"
                         onPress={(e) => dropdownNavigation("/maps")}
-                      >
+                    >
                         <Link className={buttonColorIfIsActive("/maps")} underline={isRouteActive("/maps")} href="/maps">Mapy Obwodów</Link>
                     </DropdownItem>
                     <DropdownItem
@@ -114,14 +124,14 @@ const ZbikNavbar = () => {
                     <DropdownItem
                         key="do-pobrania"
                         onPress={(e) => dropdownNavigation("/files")}
-                       >
-                        <Link className={buttonColorIfIsActive("/files")}underline={isRouteActive("/files")} href="/files">Do Pobrania</Link>
+                    >
+                        <Link className={buttonColorIfIsActive("/files")} underline={isRouteActive("/files")} href="/files">Do Pobrania</Link>
                     </DropdownItem>
                 </DropdownMenu>
             </Dropdown>
             <NavbarContent justify="end">
                 <NavbarItem className="hidden lg:flex">
-                    <Link className={buttonColorIfIsActive("/login")}underline={isRouteActive("/login")} href="/login">Zaloguj</Link>
+                    <Link className={buttonColorIfIsActive("/login")} underline={isRouteActive("/login")} href="/login">Zaloguj</Link>
                 </NavbarItem>
             </NavbarContent>
         </Navbar>

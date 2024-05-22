@@ -13,9 +13,14 @@ const Dashboard = () => {
         <div className="">
             <ZbikNavbar />
             <div className="grid gap-3 grid-cols-1 grid-rows-2">
-                <div >
-                    <ZbikBgImage />
+                <div>
+                    <ZbikBgImage/>
+                    <div><h1 className="opacity-0">_____________________________</h1></div>
+                    <div><GridNewsDashboard/></div>
+                    <div><h1 className="opacity-0">_____________________________</h1></div>
+
                 </div>
+
                 {/* <div className="row-start-2 row-span-1">
           <GridNewsDashboard />
           <h1 className="opacity-0">_____________________________</h1>

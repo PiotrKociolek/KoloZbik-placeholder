@@ -2,10 +2,15 @@
 
 import LoginBgImage from "@/components/loginBgImage";
 import {Button, Input, Link} from "@nextui-org/react";
+import ZbikNavbar from "@/components/zbikNavbar";
 
 const resetPassword = () => {
     return (
-        <div className="h-screen w-full flex items-center justify-center">
+        <div>
+            <ZbikNavbar/>
+
+    <div className="h-screen w-full flex items-center justify-center">
+
             <LoginBgImage />
             <div className="absolute inset-0 flex items-center justify-center">
                 <div className="bg-opacity-75 bg-gray-800 p-6 rounded-lg text-center">
@@ -19,7 +24,7 @@ const resetPassword = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </div></div>
     );
 };
 export default resetPassword

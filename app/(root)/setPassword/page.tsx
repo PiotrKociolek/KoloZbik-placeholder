@@ -1,37 +1,34 @@
 'use client'
-import {Button, Input} from "@nextui-org/react";
 import LoginBgImage from "@/components/loginBgImage";
+import {Button, Input} from "@nextui-org/react";
 
-
-const LoginPanel = () => {
-
-
+const setPassword = () => {
     return (
         <div className="h-screen w-full flex items-center justify-center">
-            <LoginBgImage />
+            <LoginBgImage/>
             <div className="absolute inset-0 flex items-center justify-center">
                 <div className="bg-opacity-75 bg-gray-800 p-6 rounded-lg text-center">
                     <div className="mx-auto max-w-xs">
                         <Input
-                            type="email"
-                            label="adres email"
-                            description="podaj swój adres email"
+                            type="password"
+                            label="Hasło"
+                            description="Podaj nowe hasło"
                         />
                         <Input
                             type="password"
-                            label="hasło"
-                            description="podaj swoje hasło"
+                            label="Powtórz hasło"
+                            description="Powtórz nowe hasło"
+                            className="mt-4"
                         />
-                        <Button className="mt-4 block">Zaloguj</Button>
-                        <a href="/resetPassword">
-                            <Button className="mt-2 block">Zresetuj Hasło</Button>
+                        <a href="/login">
+                            <Button className="mt-4 block">Resetuj Hasło</Button>
                         </a>
+
                     </div>
                 </div>
             </div>
         </div>
 
-
     );
 };
-export default LoginPanel
+export default setPassword
