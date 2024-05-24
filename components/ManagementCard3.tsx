@@ -8,7 +8,7 @@ const ManagementCard3 = () => {
                 <CardHeader>
                     <Image alt="Card background"
                            className="object-cover rounded-xl"
-                           src="/member.jpg"
+                           src="logokotek.png"
                            width={270}/>
                 </CardHeader>
                 <CardBody>

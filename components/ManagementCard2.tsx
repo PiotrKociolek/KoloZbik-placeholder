@@ -8,14 +8,14 @@ const ManagementCard2 = () => {
                 <CardHeader>
                     <Image alt="Card background"
                            className="object-cover rounded-xl"
-                           src="/member.jpg"
+                           src="logokotek.png"
                            width={270}/>
                 </CardHeader>
                 <CardBody>
                     <p>Hubert</p>
                     <p>Wojnarowski</p>
                     <p>Łowczy</p>
-                    <p>kontakt:</p>
+                    <p>kontakt:698 493 532</p>
                 </CardBody>
             </Card>
         </div>
