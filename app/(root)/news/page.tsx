@@ -5,6 +5,7 @@ import PaginationComponent from "@/components/pagination";
 import {Button} from "@nextui-org/react";
 import NewsShort from "@/components/newsShort1";
 import NewsShort2 from "@/components/newsShort2";
+import NewsShort2505 from "@/components/newsshort25.05";
 
 const News = () => {
     return (
@@ -17,7 +18,8 @@ const News = () => {
 
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
-               <NewsShort2/>
+               <NewsShort2505/>
+                <NewsShort2/>
                 <NewsShort/>
 
             </div>

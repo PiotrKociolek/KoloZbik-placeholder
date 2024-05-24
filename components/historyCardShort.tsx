@@ -19,9 +19,10 @@ return(
                     Koła „Żbik”: Władysław Pajorski, Bolesław Serkowski, Stefan Majcher,
                     Jan Łoboda...
                 </p>
+                <a href="/history">
                 <div className="mt-2 text-center">
-                    <Button color="success" href="/history">Czytaj Więcej</Button>
-                </div>
+                    <Button color="success" >Czytaj Więcej</Button>
+                </div></a>
             </CardBody>
         </div>
     </Card>
